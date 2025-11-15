@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d16h64ewml8wq"]
+[gd_scene load_steps=4 format=3 uid="uid://d16h64ewml8wq"]
 
 [ext_resource type="Script" uid="uid://4qijgr0yo5s1" path="res://scripts/game_manager.gd" id="1_l52tp"]
 [ext_resource type="PackedScene" uid="uid://fgb1p1cglvl5" path="res://scenes/box.tscn" id="2_gehpc"]
 [ext_resource type="PackedScene" uid="uid://cfk8b5jp2yg1x" path="res://scenes/bouncy_ball.tscn" id="3_y757v"]
-[ext_resource type="Script" uid="uid://dued3a35klh3j" path="res://scripts/bouncy_ball.gd" id="4_0kf65"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_l52tp")
@@ -11,7 +10,5 @@ script = ExtResource("1_l52tp")
 [node name="StaticBody2D" parent="." instance=ExtResource("2_gehpc")]
 
 [node name="BouncyBall" parent="." instance=ExtResource("3_y757v")]
-script = ExtResource("4_0kf65")
-gravity = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
