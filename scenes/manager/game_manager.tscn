@@ -10,3 +10,5 @@ script = ExtResource("1_l52tp")
 [node name="StaticBody2D" parent="." instance=ExtResource("2_0m4fk")]
 
 [node name="BouncyBall" parent="." instance=ExtResource("3_gehpc")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

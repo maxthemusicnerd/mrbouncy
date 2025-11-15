@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var gravity: int = 100
-var velocity = Vector2(250, 250)
+var velocity = Vector2(450, 450)
 
 func _physics_process(delta: float) -> void:
 
