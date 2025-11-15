@@ -1,5 +1,6 @@
 extends Node
 
+class_name MusicNotes
 
 #Having it work in flats as well would be a huge waste of time. 
 #For a matter of convenience we will be using Sharps Only for everything
@@ -7,9 +8,9 @@ const NOTES = [
 	"A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
 ]
 
-const CHORD_TYPES {
+const CHORD_TYPES = {
 	"major" : [0,4,7],
-	"minor" : [0,3,7],
+	"m" : [0,3,7],
 	"7" : [0,4,7,10],
 	"maj7" : [0,4,7,11],
 	"m7" : [0,3,7,10]
@@ -18,18 +19,9 @@ const CHORD_TYPES {
 #rearranges notes starting from a new tone.
 #inputing e would mean [e, f, F# ...]
 func rearrange_notes(note_center):
-	var modified_array = NOTES
-
-	var stored_array_bits = []
-	for note in NOTES:
-		if note != note_center:
-			stored_array_bits.append(note)
-			modified_array.remove(note)
-		else: 
-			break
-	
-	stored_array_bits.append_array(modified_array)
-	return stored_array_bits
+	var start_index = NOTES.find(note_center)
+	var reordered = NOTES.slice(start_index, NOTES.size()) + NOTES.slice(0, start_index)
+	return reordered
 
 
 func generate_chord(note_center, chord_type):

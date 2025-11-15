@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cp1otwmkfsj5i"
+
+[deps]
+
+files=["res://audio/music/Schmoovement.measure.translation", "res://audio/music/Schmoovement.chord.translation", "res://audio/music/Schmoovement.scale.translation"]
+
+source_file="res://audio/music/Schmoovement.csv"
+dest_files=["res://audio/music/Schmoovement.measure.translation", "res://audio/music/Schmoovement.chord.translation", "res://audio/music/Schmoovement.scale.translation"]
+
+[params]
+
+compress=true
+delimiter=0

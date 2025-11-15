@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqapc4jlxnae4"]
+
+[ext_resource type="Script" uid="uid://dy2uf6720bpj1" path="res://scripts/audio_manager.gd" id="1_7slpg"]
+[ext_resource type="AudioStream" uid="uid://chw27368xrsu3" path="res://audio/music/Schmoovement.mp3" id="2_evcxy"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_7slpg")
+
+[node name="Track1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_evcxy")
+volume_db = -7.633
+autoplay = true
+
+[node name="Track2" type="AudioStreamPlayer" parent="."]
+
+[node name="Track3" type="AudioStreamPlayer" parent="."]
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+
+[node name="Beatcounter" type="Timer" parent="."]
+
+[connection signal="timeout" from="Beatcounter" to="." method="_on_beatcounter_timeout"]

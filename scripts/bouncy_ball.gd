@@ -8,3 +8,4 @@ func _physics_process(delta: float) -> void:
 	if collision_info:
 		var collision_position = collision_info.get_position()
 		velocity = velocity.bounce(collision_info.get_normal())
+		get_parent().get_node("AudioManager").play_note()
