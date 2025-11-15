@@ -12,11 +12,7 @@ const CHORD_TYPES {
 	"minor" : [0,3,7],
 	"7" : [0,4,7,10],
 	"maj7" : [0,4,7,11],
-<<<<<<< HEAD
 	"m7" : [0,3,7,10]
-=======
-	"min7" : [0,3,7,10]
->>>>>>> e1f5f17b4c93e994199d9381cf94754455cd5a54
 }
 
 #rearranges notes starting from a new tone.
